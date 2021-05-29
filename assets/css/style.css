@@ -200,13 +200,13 @@ footer {
 
     /* stack projects */
     .secondary-left-block {
-        width: 100%;
+        width: 80%;
         padding-right: 0;
         float: none;
     }
     
     .secondary-right-block {
-        width: 100%;
+        width: 80%;
         padding-left: 0;
         float: none;
     }
