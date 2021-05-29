@@ -1,4 +1,4 @@
-# todd-harvey-portfolio
+# Todd Harvey's Portfolio
 
 ## Description
 
