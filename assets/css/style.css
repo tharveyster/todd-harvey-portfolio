@@ -1,58 +1,52 @@
-/* CSS reset */
 * {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
 }
 
-/* sets background color */
 body {
     background-color: #ccc;
     font-size: 16px;
     font-family: Verdana, Arial, sans-serif;
 }
 
-/* sets padding, background and text colors, and font for header */
+/* header section */
 header {
     display: flex;
     flex-direction: row;
-    padding: 15px;
-    background-color: #0a2c6b;
+    height: 100px;
+    padding: 28px 10px;
     color: #ccc;
+    background: url("../images/todd.jpg") no-repeat left top;
+    background-size: 100px;
+    background-color: #0a2c6b;
 }
 
-/* sets title size, and displays it inline with the navigation */
 header h1 {
     display: inline-block;
-    font-size: 48px;
+    font-size: 42px;
+    padding-left: 100px;
 }
 
-/* changes part of the title to a different color */
-header h1 .seo {
-    color: #d9dcd6;
-}
-
-/* sets padding, margin, and fone family and size for the navigation bar */
+/* navigation bar */
 nav {
     display: flex;
-    flex: 1 1 50%;
+    flex: 1 1 40%;
     justify-content: flex-end;
-    padding-top: 15px;
+    padding-top: 12px;
     font-size: 20px;
 }
 
-/* removes bullets from navigation items */
 nav ul {
     list-style-type: none;
 }
 
-/* sets navigation items in line with each other and separates them */
 nav ul li {
     display: inline-block;
     margin-left: 20px;
 }
 
-/* colors the link text and removes underlines */
+/* link formatting */
 a {
     color: #fff;
     text-decoration: none;
@@ -62,19 +56,19 @@ a:hover {
     color: cornflowerblue;
 }
 
-/* sets the font size for all paragraphs */
+/* space out paragraphs */
 p {
-    font-size: 16px;
+    margin-bottom: 10px;
 }
 
-/* sets the width, display, and margin for the content section */
+/* sets the width, display type, and padding for the content section */
 .content {
     width: 100%;
     display: inline-block;
     padding: 20px;
 }
 
-/* about me section */
+/* formatting for the about me, work, and contact me sections */
 .block-container {
     width: 100%;
     display: flex;
@@ -92,7 +86,7 @@ p {
 }
 
 .block-title h2 {
-    font-size: 24px;
+    font-size: 28px;
 }
 
 .block-content {
@@ -111,6 +105,7 @@ p {
     opacity: 1.0;
 }
 
+/* formatting for the most recent project */
 .primary-project {
     border: 5px solid #0a2c6b;
     position: relative;
@@ -118,13 +113,25 @@ p {
     margin-bottom: 20px;
 }
 
-.secondary-project {
-    border: 5px solid #0a2c6b;
-    position: relative;
+/* formatting for the remaining projects */
+.secondary-left-block {
     width: 50%;
+    padding: 0 10px 20px 0;
     float: left;
 }
 
+.secondary-right-block {
+    width: 50%;
+    padding: 0  0 20px 10px;
+    float: right;
+}
+
+.secondary-project {
+    border: 5px solid #0a2c6b;
+    position: relative;
+}
+
+/* title bar that appears on each project */
 .project-title {
     display: inline;
     background-color: #0a2c6b;
@@ -132,7 +139,7 @@ p {
     position: absolute;
     left: 0;
     bottom: 20px;
-    padding: 20px;
+    padding: 10px;
 }
 
 .project-title h3 {
@@ -140,7 +147,7 @@ p {
     font-size: 20px;
 }
 
-
+/* contact me section */
 .contact-info {
     display: inline;
     text-decoration: underline;
@@ -158,58 +165,7 @@ p {
     color: blue;
 }
 
-/* sets all formatting for the benefits section */
-.benefits {
-    margin-right: 20px;
-    padding: 20px;
-    clear: both;
-    float: right;
-    width: 20%;
-    height: 100%;
-    background-color: #2589bd;
-}
-
-/* sets text color and provides space under each element */
-.benefit-lead,
-.benefit-brand,
-.benefit-cost {
-    margin-bottom: 32px;
-    color: #ffffff;
-}
-
-/* centers text and provides space on the bottom */
-.benefit-lead h3,
-.benefit-brand h3,
-.benefit-cost h3 {
-    margin-bottom: 10px;
-    text-align: center;
-}
-
-/* sets the display type, maximum image size, and margin */
-.benefit-lead img,
-.benefit-brand img,
-.benefit-cost img {
-    display: block;
-    margin: 10px auto;
-    max-width: 150px;
-}
-
-/* sets the maximum height for the images with these ids */
-#search-engine-optimization img,
-#online-reputation-management img,
-#social-media-marketing img {
-    max-height: 200px;
-}
-
-/* sets the text size and bottom margin for the titles under these ids */
-#search-engine-optimization h2,
-#online-reputation-management h2,
-#social-media-marketing h2 {
-    margin-bottom: 20px;
-    font-size: 36px;
-}
-
-/* sets the font fanily and centers the text, and clears all floats */
+/* sets the font family and centers the text, and clears all floats */
 footer {
     padding: 30px;
     clear: both;
@@ -222,8 +178,10 @@ footer h4 {
 }
 
 @media screen and (max-width: 768px) {
+    /* stack header elements */
     header {
         flex-direction: column;
+        padding: 12px 10px;
     }
 
     header h1 {
@@ -232,6 +190,8 @@ footer h4 {
 
     nav {
         justify-content: center;
+        padding-left: 100px;
+        font-size: 16px;
     }
 
     nav ul li {
@@ -243,6 +203,20 @@ footer h4 {
         font-size: 18px;
     }
 
+    /* stack projects */
+    .secondary-left-block {
+        width: 100%;
+        padding-right: 0;
+        float: none;
+    }
+    
+    .secondary-right-block {
+        width: 100%;
+        padding-left: 0;
+        float: none;
+    }
+    
+    /* stack contact methods */
     .contact-info {
         display: block;
         margin-bottom: 20px;
