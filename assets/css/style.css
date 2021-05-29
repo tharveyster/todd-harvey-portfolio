@@ -61,8 +61,8 @@ p {
     margin-bottom: 10px;
 }
 
-/* sets the width, display type, and padding for the content section */
-.content {
+/* sets the width, display type, and padding for the main content */
+main {
     width: 100%;
     display: inline-block;
     padding: 20px;
@@ -165,16 +165,11 @@ p {
     color: blue;
 }
 
-/* sets the font family and centers the text, and clears all floats */
+/* sets the footer formatting */
 footer {
-    padding: 30px;
+    padding: 10px 0 30px 0;
     clear: both;
     text-align: center;
-}
-
-/* sets the footer title text size */
-footer h4 {
-    font-size: 20px;
 }
 
 @media screen and (max-width: 768px) {
