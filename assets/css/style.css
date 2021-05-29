@@ -1,0 +1,250 @@
+/* CSS reset */
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+/* sets background color */
+body {
+    background-color: #ccc;
+    font-size: 16px;
+    font-family: Verdana, Arial, sans-serif;
+}
+
+/* sets padding, background and text colors, and font for header */
+header {
+    display: flex;
+    flex-direction: row;
+    padding: 15px;
+    background-color: #0a2c6b;
+    color: #ccc;
+}
+
+/* sets title size, and displays it inline with the navigation */
+header h1 {
+    display: inline-block;
+    font-size: 48px;
+}
+
+/* changes part of the title to a different color */
+header h1 .seo {
+    color: #d9dcd6;
+}
+
+/* sets padding, margin, and fone family and size for the navigation bar */
+nav {
+    display: flex;
+    flex: 1 1 50%;
+    justify-content: flex-end;
+    padding-top: 15px;
+    font-size: 20px;
+}
+
+/* removes bullets from navigation items */
+nav ul {
+    list-style-type: none;
+}
+
+/* sets navigation items in line with each other and separates them */
+nav ul li {
+    display: inline-block;
+    margin-left: 20px;
+}
+
+/* colors the link text and removes underlines */
+a {
+    color: #fff;
+    text-decoration: none;
+}
+
+a:hover {
+    color: cornflowerblue;
+}
+
+/* sets the font size for all paragraphs */
+p {
+    font-size: 16px;
+}
+
+/* sets the width, display, and margin for the content section */
+.content {
+    width: 100%;
+    display: inline-block;
+    padding: 20px;
+}
+
+/* about me section */
+.block-container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin-bottom: 20px;
+}
+
+.block-title {
+    width: 20%;
+    border-right: 5px solid gray;
+    text-align: right;
+    align-items: flex-end;
+    padding-right: 20px;
+}
+
+.block-title h2 {
+    font-size: 24px;
+}
+
+.block-content {
+    width: 80%;
+    padding-left: 30px;
+}
+
+.block-content img {
+    display: block;
+    width: 100%;
+    opacity: 0.5;
+    transition: opacity 300ms linear;
+}
+
+.block-content img:hover {
+    opacity: 1.0;
+}
+
+.primary-project {
+    border: 5px solid #0a2c6b;
+    position: relative;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.secondary-project {
+    border: 5px solid #0a2c6b;
+    position: relative;
+    width: 50%;
+    float: left;
+}
+
+.project-title {
+    display: inline;
+    background-color: #0a2c6b;
+    color: #ccc;
+    position: absolute;
+    left: 0;
+    bottom: 20px;
+    padding: 20px;
+}
+
+.project-title h3 {
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+
+.contact-info {
+    display: inline;
+    text-decoration: underline;
+    text-decoration-color: gray;
+    text-decoration-thickness: 5px;
+    padding-right: 40px;
+}
+
+.contact-info a {
+    color: black;
+    text-decoration-color: gray;
+}
+
+.contact-info a:hover {
+    color: blue;
+}
+
+/* sets all formatting for the benefits section */
+.benefits {
+    margin-right: 20px;
+    padding: 20px;
+    clear: both;
+    float: right;
+    width: 20%;
+    height: 100%;
+    background-color: #2589bd;
+}
+
+/* sets text color and provides space under each element */
+.benefit-lead,
+.benefit-brand,
+.benefit-cost {
+    margin-bottom: 32px;
+    color: #ffffff;
+}
+
+/* centers text and provides space on the bottom */
+.benefit-lead h3,
+.benefit-brand h3,
+.benefit-cost h3 {
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+/* sets the display type, maximum image size, and margin */
+.benefit-lead img,
+.benefit-brand img,
+.benefit-cost img {
+    display: block;
+    margin: 10px auto;
+    max-width: 150px;
+}
+
+/* sets the maximum height for the images with these ids */
+#search-engine-optimization img,
+#online-reputation-management img,
+#social-media-marketing img {
+    max-height: 200px;
+}
+
+/* sets the text size and bottom margin for the titles under these ids */
+#search-engine-optimization h2,
+#online-reputation-management h2,
+#social-media-marketing h2 {
+    margin-bottom: 20px;
+    font-size: 36px;
+}
+
+/* sets the font fanily and centers the text, and clears all floats */
+footer {
+    padding: 30px;
+    clear: both;
+    text-align: center;
+}
+
+/* sets the footer title text size */
+footer h4 {
+    font-size: 20px;
+}
+
+@media screen and (max-width: 768px) {
+    header {
+        flex-direction: column;
+    }
+
+    header h1 {
+        text-align: center;
+    }
+
+    nav {
+        justify-content: center;
+    }
+
+    nav ul li {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .block-title h2 {
+        font-size: 18px;
+    }
+
+    .contact-info {
+        display: block;
+        margin-bottom: 20px;
+    }
+}
