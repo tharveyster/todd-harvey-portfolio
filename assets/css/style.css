@@ -153,10 +153,15 @@ main {
 /* contact me section */
 .contact-info {
     display: inline;
-    text-decoration: underline;
-    text-decoration-color: gray;
-    text-decoration-thickness: 5px;
-    padding-right: 40px;
+}
+
+.contact-info span {
+    padding-bottom: 1px;
+    border-bottom: 3px solid gray;
+}
+
+.contact-info:not(:last-child) {
+    padding-right: 28px;
 }
 
 .contact-info a {
