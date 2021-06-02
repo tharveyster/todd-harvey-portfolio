@@ -10,6 +10,10 @@ body {
     font-family: Verdana, Arial, sans-serif;
 }
 
+p {
+    text-align: justify;
+}
+
 /* header section */
 header {
     display: flex;
@@ -81,8 +85,7 @@ main {
     width: 20%;
     border-right: 5px solid gray;
     text-align: right;
-    align-items: flex-end;
-    padding-right: 20px;
+    padding: 0 20px 0 0 ;
 }
 
 .block-title h2 {
@@ -194,6 +197,15 @@ footer {
         margin-right: 10px;
     }
 
+    /* reduce spacing between elements */
+    .block-title {
+        padding: 0 10px 0 0 ;
+    }
+    
+    .block-content {
+        padding-left: 10px;
+    }
+
     .block-title h2 {
         font-size: 18px;
     }
@@ -215,5 +227,40 @@ footer {
     .contact-info {
         display: block;
         margin-bottom: 20px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    /* reduce header elements to fit */
+    header {
+        padding: 20px 10px;
+    }
+
+    header h1 {
+        font-size: 30px;
+    }
+    
+    nav {
+        font-size: 14px;
+    }
+
+    nav ul li {
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+
+    /* reposition elements to best use available space */
+    .block-title {
+        width: 100%;
+        border-right: 0;
+        border-bottom: 5px solid gray;
+        text-align: left;
+        padding: 0 0 5px 0 ;
+        margin-bottom: 10px;
+    }
+
+    .block-content {
+        width: 100%;
+        padding-left: 0;
     }
 }
